@@ -28,12 +28,12 @@ namespace TelegramBotWPF2
         private ObservableCollection<TelegramUser> users;
         public ObservableCollection<TelegramUser> Users { get => this.users; }
 
-        public TgBot(MainWindow mainWindow, string tokenPath = @"TokenTelegram.txt")
+        public TgBot(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
             users = new ObservableCollection<TelegramUser>();
 
-            botClient = new TelegramBotClient(System.IO.File.ReadAllText(tokenPath));
+            botClient = new TelegramBotClient("5308130432:AAFuba3_1oZrIfQoRXRSfKSnmmoG7rZQ9Qw");
 
             using CancellationTokenSource cts = new CancellationTokenSource();
 
